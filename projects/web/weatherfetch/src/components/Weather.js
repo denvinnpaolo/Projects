@@ -34,7 +34,6 @@ const Weather = () => {
                 lat: res.results[0].geometry.location.lat,
                 lng: res.results[0].geometry.location.lng
             })
-            console.log(location)
             axios.get(`https://api.openweathermap.org/data/2.5/weather?lat=${location.lat}&lon=${location.lng}&appid=14318e73194655c38ceca5222adc5301&units=imperial`)
             .then(data =>{ 
                 console.log(data)
